@@ -40,7 +40,7 @@ canvas {
 }
 
 #menu button:hover {
-	background-color: black;
+	background-color: #16d6cd;
 	color: white;
 }
 
@@ -75,3 +75,148 @@ canvas {
 	width: 30px;
 	height: 30px;
   }
+
+/* Center the content */
+.container {
+	width: 80%;
+	margin: 0 auto;
+  }
+  
+  /* Style the header */
+  header {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+  }
+  
+  /* Style the links */
+  nav {
+	background-color: #141414;
+	padding: 20px;
+  }
+  
+  nav a {
+	display: inline-block;
+	color: #f1ee06;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-right: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	transition: all 0.2s ease;
+  }
+  
+  nav a:hover {
+	background-color: #16d6cd;
+	color: white;
+	transform: translateY(-3px);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the content */
+  section {
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: #f2f2f2;
+  }
+  
+  /* Style the footer */
+  footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+  }
+  
+  /* Responsive design */
+  @media only screen and (max-width: 600px) {
+	.container {
+	  width: 100%;
+	  padding: 0;
+	}
+	nav {
+	  text-align: center;
+	}
+	nav a {
+	  display: block;
+	}
+  }
+  
+
+  /* General styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  body {
+	background-image: url('background.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  header {
+	background-color: #333;
+	padding: 10px;
+  }
+  
+  nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  nav li {
+	display: inline-block;
+	margin-right: 20px;
+  }
+  
+  nav a {
+	display: block;
+	color: #f1ee06;
+	padding: 10px;
+	text-decoration: none;
+  }
+  
+  nav a:hover {
+	background-color: #16d6cd;
+	color: white;
+  }
+  
+  /* Menu styles */
+  #menu {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  
+  h1 {
+	font-size: 3em;
+	margin-bottom: 20px;
+	color: #f1ee06;
+  }
+  
+  button {
+	background-color: #333;
+	color: black;
+	border: none;
+	padding: 10px 20px;
+	margin-right: 10px;
+	font-size: 1.2em;
+	cursor: pointer;
+  }
+  
+  button:hover {
+	background-color: #16d6cd;
+  }
+  
+
+  
