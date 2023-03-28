@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Galactic Defendere</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body style="background-image: url('background.jpeg'); background-size: cover; background-repeat: no-repeat; margin: 0; padding: 0; overflow: hidden;">
+
+	<div id="menu">
+		<h1>Welcome to Galactic Defender</h1>
+		<button id="playBtn">Play</button>
+		<button id="musicBtn">Music On</button>
+		<button id="effectsBtn">Under Contruction </button>
+	</div>
+
+	<script>
+		const playBtn = document.getElementById('playBtn');
+		const musicBtn = document.getElementById('musicBtn');
+		const effectsBtn = document.getElementById('effectsBtn');
+
+		playBtn.addEventListener('click', () => {
+			window.location.href = 'shooter.html';
+			backgroundMusic.play();
+		});
+
+		musicBtn.addEventListener('click', () => {
+			const backgroundMusic = document.getElementById('backgroundMusic');
+			if (backgroundMusic.paused) {
+				backgroundMusic.play();
+				musicBtn.textContent = 'Music Off';
+			} else {
+				backgroundMusic.pause();
+				musicBtn.textContent = 'Music On';
+			}
+		});
+
+	</script>
+
+	<audio id="bulletSound" src="bullet_sound.mp3"></audio>
+	<audio id="crashSound" src="crashSound.wav"></audio>
+	<audio id="backgroundMusic" src="sinnesloschen-beam-117362.mp3" loop></audio>
+
+</body>
+</html>
