@@ -310,8 +310,84 @@ function drawPlayer() {
 			var backgroundMusic = document.getElementById("backgroundMusic");
 			backgroundMusic.play();
 		  });
+
+
+
 		  
 
+
+
+		  canvas.addEventListener('touchstart', handleTouchStart);
+		  canvas.addEventListener('touchmove', handleTouchMove);
+		  canvas.addEventListener('touchend', handleTouchEnd);
+
+		  let touchX = null;
+let touchY = null;
+
+function handleTouchStart(event) {
+    touchX = event.touches[0].clientX;
+    touchY = event.touches[0].clientY;
+}
+
+function handleTouchMove(event) {
+    if (touchX === null || touchY === null) {
+        return;
+    }
+
+    let newTouchX = event.touches[0].clientX;
+    let newTouchY = event.touches[0].clientY;
+
+    let deltaX = newTouchX - touchX;
+    let deltaY = newTouchY - touchY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX > 0) {
+            // move right
+            if (playerX + playerSpeed + playerRadius <= canvas.width) {
+                playerX += playerSpeed;
+            }
+        } else {
+            // move left
+            if (playerX - playerSpeed >= 0) {
+                playerX -= playerSpeed;
+            }
+        }
+    } else {
+        if (deltaY > 0) {
+            // move down
+            if (playerY + playerSpeed + playerRadius <= canvas.height) {
+                playerY += playerSpeed;
+            }
+        } else {
+            // move up
+            if (playerY - playerSpeed >= 0) {
+                playerY -= playerSpeed;
+            }
+        }
+    }
+
+    touchX = newTouchX;
+    touchY = newTouchY;
+}
+
+function handleTouchEnd(event) {
+    touchX = null;
+    touchY = null;
+}
+
+
+canvas.addEventListener('touchstart', function(event) {
+    bullets.push({
+        x: playerX,
+        y: playerY,
+        speed: bulletSpeed,
+        radius: bulletRadius
+    });
+});
+
+		  
+		
+		  
 
 		
 		  
